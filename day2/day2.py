@@ -9,7 +9,7 @@ aim = 0
 
 # loop though commands
 for command in commands:
-    # get movement and value
+    # get movement and amount
     movement, amount = command.split(" ")
     # process
     if movement == "down":
