@@ -7,13 +7,14 @@ previous_sum = 9999999 # hack to make sure the first measure isn't counted
 larger_sums = 0
 index = 0
 
-while( index < len(measures) - 3):
+while(index < len(measures) - 2):
+    print("Comparison " + str(index))
     first = int(measures[index])
     second = int(measures[index+1])
     third = int(measures[index+2])
 
     this_sum = first + second + third
-    print("This sum: " + str(this_sum))
+    print( str(first) + " + " + str(second) + " + " + str(third) + " = " + str(this_sum))
     print("Previous sum: " + str(previous_sum))
 
     if this_sum > previous_sum:
