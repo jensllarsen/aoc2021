@@ -5,18 +5,20 @@ with open('input.txt') as f:
 
 position = 0
 depth = 0
+aim = 0
 
 # loop though commands
 for command in commands:
     # get movement and value
     movement, amount = command.split(" ")
     # process
-    if movement == "forward":
-        position = position + int(amount)
-    elif movement == "down":
-        depth = depth + int(amount)
+    if movement == "down":
+        aim += int(amount)
     elif movement == "up":
-        depth = depth - int(amount)
+        aim -= int(amount)
+    elif movement == "forward":
+        position += int(amount)
+        depth += (int(amount) * aim)
     else:
         print("Unknown command!")
 
